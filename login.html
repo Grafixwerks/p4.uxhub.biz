@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jobzr</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+<div class="wrapper">
+<div class="main-header ">
+<a href="/" class="logo">Jobzr</a>
+
+<ul class="user-nav">
+<li><a href="#">Join</a></li>
+<li><a href="#">Login</a></li>
+</ul>
+</div><!-- close .header -->
+<div class="main">
+
+
+
+<h1>Login to your account</h1>
+
+
+<form action="<cfoutput>#baseURL#</cfoutput>process/login-user.cfm" method="post" name="login" id="login">
+
+<div class="form-field">
+<label for="email">Email<span class="star">*</span></label>
+<input type="text" class="med txt" name="email" id="email" maxlength="20" />
+</div><!-- close .form-field -->
+
+
+<div class="form-field">
+<label id="label-pw" for="pw">Password<span class="star">*</span></label>
+<input type="password" class="med txt" name="pw" id="pw" maxlength="30" />
+</div><!-- close .form-field -->
+
+
+<input name="login" id="join-btn" class="btn" type="submit" value="Login" />
+
+<p class="notice"><a href="join.html">Join</a></p>
+      
+<p class="notice"><span class="star">*</span>Required information.</p>
+</form>
+
+
+
+
+</div><!-- close .main -->
+
+<div class="footer">
+&copy;Jobzr
+</div><!-- close .footer -->
+</div><!-- close .wrapper -->
+<br>
+
+
+    <div id="shade">
+    	&nbsp;
+	</div><!--  Close shade  -->
+<!---->
+    <div id="pop" style="display:none" >
+    <a href="javascript: void(0)" id="close" class="close">Close</a>
+    
+<p>Etiam venenatis elit ac justo condimentum, non blandit mi euismod. Maecenas tincidunt arcu sagittis eros faucibus, sit amet ultricies elit dictum. Curabitur semper non libero vitae vulputate. In hac habitasse platea dictumst. Phasellus ut sapien id nisi aliquam commodo. Integer vestibulum tortor nec cursus egestas. Aliquam a posuere felis. Etiam ac tincidunt felis. Quisque pellentesque egestas accumsan. Nam iaculis sapien in massa gravida, vulputate placerat elit tristique. Mauris tristique eget risus elementum consequat.</p> 
+    
+    </div><!--close pop-->
+
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function() {
+	// validate the login form
+	$("#login").validate({
+		rules: {
+			email: {
+				required: true,
+				minlength: 3
+			},			
+			pw: {
+				required: true,
+				minlength : 6
+			}
+		},
+		messages: {
+			email: "Please enter a screen name, at least 3 characters."
+		},
+		errorPlacement: function(error, element) {
+			 error.appendTo(element.parent());
+		}		
+	});
+}); // close doc ready
+// ]]>
+</script>
+
+</body>
+</html>
