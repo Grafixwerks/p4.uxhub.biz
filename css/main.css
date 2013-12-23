@@ -293,7 +293,7 @@ input.txt {
 	border-radius: 5px;
 }
 textarea.txt {
-	border: 1px solid #03ADF0;
+	border: 1px solid #F60;
 	padding: 2px;
 	background: #F8FBFC;
 	-webkit-border-radius: 5px;
@@ -383,4 +383,7 @@ body .wrapper .btn {
 }
 .th-from {
 	width: 200px;
+}
+#create-ad {
+	width: 500px;
 }
