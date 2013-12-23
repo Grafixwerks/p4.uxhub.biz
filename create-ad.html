@@ -56,35 +56,45 @@
   <option value="bx">Bronx</option>  
   <option value="man">Manhattan</option>
   <option value="q">Queens</option>
+  <option value="si">Staen Island</option>  
 </select> 
 
 </div><!-- close .form-select -->
 
- 
-<div class="form-radio">
-<h3>Type<span class="star">*</span></h3>
-Permanent
-<input name="type" type="radio" value="Permanent" id="permanent">
-Freelance
-<input name="type" type="radio" value="Freelance" id="freelance">
 
-Internship
-<input name="type" type="radio" value="Internship" id="internship">
 
-</div><!-- close .form-radio -->
+<div class="form-select">
+<label for="location">Type<span class="star">*</span></label>
+
+<select name="location" id="location">
+  <option value="0">Choose</option>
+  <option value="bk">Permanent</option>
+  <option value="bx">Freelance</option>
+  <option value="bx">Temp</option>  
+  <option value="man">Internship</option>
+</select> 
+
+</div><!-- close .form-select --> 
 
 
 <div class="form-radio">
 <h3>Hours<span class="star">*</span></h3>
-Full time
-<input name="type" type="radio" value="Permanent" id="permanent">
-Part time
-<input name="type" type="radio" value="Freelance" id="freelance">
+<label for="full-time">Full time</label>
+<input name="type" type="radio" value="full-time" id="full-time">
+<label for="part-time">Part time</label>
+<input name="type" type="radio" value="part-time" id="part-time">
 
 </div><!-- close .form-radio -->
 
 
+<div class="form-radio">
+<h3>On site<span class="star">*</span></h3>
+<label for="on-site">On site</label>
+<input name="type" type="radio" value="on-site" id="on-site">
+<label for="off-site">Off site</label>
+<input name="type" type="radio" value="off-site" id="off-site">
 
+</div><!-- close .form-radio -->
 
 
 <div class="form-textarea">
@@ -93,9 +103,7 @@ Part time
 </div><!-- close .form-textarea -->
 
 
-
-
-
+<input name="create-ad" id="btn-ad" class="btn" type="submit" value="Create Ad" />
 
 </form>
 

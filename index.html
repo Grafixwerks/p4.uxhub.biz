@@ -23,12 +23,12 @@
 <table class="tablesorter listing">
     <thead>
   <tr>
-    <th scope="col" class="left">Headline</th>
-    <th scope="col">???</th>
-    <th scope="col">???</th>
-    <th scope="col">???</th>
-    <th scope="col">Level</th>
-    <th scope="col">Location</th>
+    <th scope="col" class="left th-head">Headline</th>
+    <th scope="col" class="th-perm">Type</th>
+    <th scope="col" class="th-hour">Hours</th>
+    <th scope="col" class="th-site">Site</th>
+    <th scope="col" class="th-level">Level</th>
+    <th scope="col" class="th-location">Location</th>
   </tr>
     </thead>
     <tbody> 
@@ -43,7 +43,7 @@
   </tr>
   <tr>
     <td class="left"><a href="">UI Designers (Mobile) @ FreshPlanet - maker of the hit game SongPop</a></td>
-    <td>Freelance</td>
+    <td>Temp</td>
     <td>Part time</td>
     <td>On site</td>
     <td>Mid</td>
@@ -79,7 +79,7 @@
  </div><!-- close .main -->
 
 <div class="footer">
-<p>&copy;Jobzr</p>
+<p>CSCI E-15 Project 4 &copy;2013 Andy Pearson</p>
 </div><!-- close .footer -->
 
 
@@ -92,35 +92,35 @@
     <div id="shade">
     	&nbsp;
 	</div><!--  Close shade  -->
-<!---->style="display:none" 
 
 
-<div id="modal-login" class="modal">
+<!-- --> 
+<div id="modal-login" class="modal" style="display:none">
     
 <a href="javascript: void(0)" id="close" class="close">Close</a>
 
-<h2>Login to your account</h2>
+<h2 id="login-h">Login to your account</h2>
 
 
 <form action="<cfoutput>#baseURL#</cfoutput>process/login-user.cfm" method="post" name="login" id="login">
 
 <div class="form-field">
-<label for="email">Email<span class="star">*</span></label>
+<label for="email">Email</label>
 <input type="text" class="med txt" name="email" id="email" maxlength="20" />
 </div><!-- close .form-field -->
 
 
 <div class="form-field">
-<label id="label-pw" for="pw">Password<span class="star">*</span></label>
+<label id="label-pw" for="pw">Password</label>
 <input type="password" class="med txt" name="pw" id="pw" maxlength="30" />
 </div><!-- close .form-field -->
 
 
 <input name="login" id="join-btn" class="btn" type="submit" value="Login" />
 
-<p class="notice"><a href="join.html">Join</a></p>
+<a href="join.html" id="join-link">Join</a>
       
-<p class="notice"><span class="star">*</span>Required information.</p>
+
 </form>
     
     </div><!--close #modal-login -->
