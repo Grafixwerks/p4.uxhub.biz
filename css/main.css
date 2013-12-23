@@ -66,6 +66,8 @@ a img {
 h1 {
 	font-size: 30px;
 	color: #30576B;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
 .error  {
 	color:#FF0000;
@@ -355,4 +357,30 @@ body .wrapper .btn {
 }
 .job-ad li {
 	line-height: 20px;
+}
+.main h2 {
+	font-size: 16px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.th-headline {
+	width: 665px;
+}
+.th-posted {
+	width: 80px;
+}
+.th-edit {
+	width: 40px;
+}
+.th-delete {
+	width: 30px;
+}
+.th-subject {
+	width: 535px;
+}
+.th-date {
+	width: 50px;
+}
+.th-from {
+	width: 200px;
 }
