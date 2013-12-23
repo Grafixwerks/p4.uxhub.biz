@@ -53,11 +53,14 @@ a img {
 .user-nav li {
 	float: right;
 	margin-left: 20px;
+	font-size: 14px;
 }
-
 .user-nav li a {
 	color: #F60;
 	text-decoration: none;
+}
+.user-nav li a:hover {
+	text-decoration: underline;
 }
 .main {
 	min-height: 600px;
@@ -434,4 +437,7 @@ body .wrapper .btn:hover {
 	float: left;
 	clear: both;
 	width: 550px;
+}
+#send-message {
+	width: 500px;
 }

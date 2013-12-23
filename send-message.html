@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jobzr</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+<div class="wrapper">
+<div class="main-header ">
+<a href="/" class="logo">Jobzr</a>
+
+<ul class="user-nav">
+<li><a href="#">Log out</a></li>
+<li>Logged in as <a href="#">Profile</a></li>
+</ul>
+</div><!-- close .header -->
+<div class="main">
+
+
+<h1>Send a message</h1>
+
+
+<p>To: <a href="#">link to profile</a></p>
+
+
+<form action="send-message" method="post" name="send-message" id="send-message" class="wide">
+
+<div class="form-field">
+    <label for="subject">Subject<span class="star">*</span></label>
+    <input type="text" class="txt long" name="subject" id="subject" maxlength="40" />
+</div><!-- close .form-field -->
+
+
+<div class="form-textarea">
+    <label for="message">Message<span class="star">*</span></label>
+    <textarea name="message" id="message	" maxlength="5000" class="txt long"></textarea>
+</div><!-- close .form-textarea -->
+
+
+<input name="create-ad" id="btn-ad" class="btn" type="submit" value="Send" />
+
+
+</form>
+</div><!-- close .main -->
+
+<div class="footer">
+&copy;Jobzr
+</div><!-- close .footer -->
+</div><!-- close .wrapper -->
+<br>
+
+
+
+
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
+
+</body>
+</html>
