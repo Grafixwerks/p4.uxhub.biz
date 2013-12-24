@@ -38,6 +38,41 @@ $(document).ready(function(){
 					3: { sorter: false }
 				}		  
 	});
-	  
+
+	$("#join").validate({
+		rules: {	
+			f_name: {
+				required: true,
+				minlength: 2
+			},
+			l_name: {
+				required: true,
+				minlength: 2
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true,
+				minlength : 6
+			},
+			pw_2: {
+				required: true,
+				minlength : 6,
+				equalTo : "#pw"
+			}
+		},
+		messages: {
+			f_name: "Please enter your first name.",
+			l_name: "Please enter your last name.",
+			email: "Please enter a valid email address."
+		},
+		errorPlacement: function(error, element) {
+			 error.appendTo(element.parent());
+		}		
+	});
+
+
 }); // close document ready
   

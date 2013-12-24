@@ -34,18 +34,18 @@
 <p class="notice">We don't spam. Your email address will not be seen by other users of this site and we will not spam you. Your email address won't be shared.</p>
 
 <div class="form-field">
-    <label for="firstName">First name</label>
-    <input type="text" class="med txt" name="firstName" id="firstName" maxlength="40" />
+    <label for="f_name">First name</label>
+    <input type="text" class="med txt" name="f_name" id="f_name" maxlength="40" />
 </div><!-- close .form-field -->
 
 <div class="form-field">
-    <label for="lastName">Last name</label>
-    <input type="text" class="med txt" name="lastName" id="lastName" maxlength="40" />
+    <label for="l_name">Last name</label>
+    <input type="text" class="med txt" name="l_name" id="l_name" maxlength="40" />
 </div><!-- close .form-field -->
 
 <div class="form-field">
-    <label id="label-pw" for="pw">Password<span class="star">*</span></label>
-    <input type="password" class="med txt" name="pw" id="pw" maxlength="30" />
+    <label id="label-password" for="password">Password<span class="star">*</span></label>
+    <input type="password" class="med txt" name="password" id="password" maxlength="30" />
 </div><!-- close .form-field -->
 
 <p class="notice">6 or more characters. Please use letters and numbers.</p>
@@ -95,11 +95,11 @@ $(document).ready(function() {
 	// validate join form 
 	$("#join").validate({
 		rules: {	
-			firstName: {
+			f_name: {
 				required: true,
 				minlength: 2
 			},
-			lastName: {
+			l_name: {
 				required: true,
 				minlength: 2
 			},
@@ -107,7 +107,7 @@ $(document).ready(function() {
 				required: true,
 				email: true
 			},
-			pw: {
+			password: {
 				required: true,
 				minlength : 6
 			},
@@ -118,8 +118,8 @@ $(document).ready(function() {
 			}
 		},
 		messages: {
-			firstName: "Please enter your first name.",
-			lastName: "Please enter your last name.",
+			f_name: "Please enter your first name.",
+			l_name: "Please enter your last name.",
 			email: "Please enter a valid email address."
 		},
 		errorPlacement: function(error, element) {
