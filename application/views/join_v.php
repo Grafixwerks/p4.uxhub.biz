@@ -36,8 +36,8 @@ echo form_open('user_c/join_validation', $attributes) ; ?>
 <p class="notice">6 or more characters. Please use letters and numbers.</p>
 
 <div class="form-field">
-    <label id="label-pw-2" for="pw_2">Verify password<span class="star">*</span></label>
-    <input type="password" class="med txt" name="pw_2" id="pw_2" maxlength="30"  autocomplete="off" />
+    <label id="label-pw-2" for="c_password">Verify password<span class="star">*</span></label>
+    <input type="password" class="med txt" name="c_password" id="c_password" maxlength="30"  autocomplete="off" />
 </div><!-- close .form-field -->
 
 <input name="join" id="join-btn" class="btn" type="submit" value="Join" />

@@ -41,13 +41,17 @@
 $route['default_controller'] = "main_c"; // homepage
 $route['404_override'] = '';
 
-
-$route['join'] = "user_c/join"; // Form to join
-
 $route['sign-in'] = "user_c"; // user sign in
+$route['join'] = "user_c/join"; // Form to join
+$route['join-success'] = "user_c/join_success"; // confirmation of form submission 
+$route['confirm/(:any)'] = "user_c/register_user/$1"; // confirm email code, send to 2nd form
+$route['update-profile'] = "user_c/update_profile"; // edit logged in user profile
 $route['sign-out'] = "user_c/sign_out"; // log out current user, redirect to HTTP referrer
 
 
+$route['profile'] = "profile_c"; // logged in user profile
+$route['dashboard'] = "profile_c/dashboard" ; // logged in user dashboard for site
+$route['user/(:any)'] = "profile_c/user/$1"; // show profile of user by user_id
 
 
 

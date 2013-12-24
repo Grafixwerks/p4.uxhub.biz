@@ -4,7 +4,7 @@ class User_c extends CI_Controller {
 
 	// Sign in form page
 	public function index() {
-		$this->load->helper('form');
+		//$this->load->helper('form');
 		$data['title'] = 'Sign in' ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('sign_in_v', $data) ;
@@ -18,7 +18,7 @@ class User_c extends CI_Controller {
 		$this->form_validation->set_rules('password', 'Password', 'required|md5|trim') ;
 		// if passes validation go to home page
 		if ($this->form_validation->run() == TRUE) {
-			redirect('site_controller') ;
+			redirect('/') ;
 		} else {
 			$data['title'] = 'Sign in' ;
 			$this->load->view('header_v', $data) ;
@@ -30,9 +30,9 @@ class User_c extends CI_Controller {
 	// Sign in, check email/pw in users table
 	public function validate_credentials()
 	{
-		$this->load->model('users_model');
+		$this->load->model('users_m');
 		// Call function to check email/pw
-		if ( $this->users_model->can_log_in() ) {
+		if ( $this->users_m->can_log_in() ) {
 			return true ;
 		} else {
 			$this->form_validation->set_message('validate_credentials','Incorrect username/password.') ;
@@ -48,7 +48,7 @@ class User_c extends CI_Controller {
 
 	// Join form page
 	public function join() {
-		$this->load->helper('form');
+		//$this->load->helper('form');
 		$data['title'] = 'Join' ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('join_v', $data) ;
@@ -71,7 +71,7 @@ class User_c extends CI_Controller {
 			$confirm_code = md5(uniqid()) ;
 			
 			$this->load->library('email', array('mailtype'=>'html')) ;
-			$this->load->model('users_model') ;
+			$this->load->model('users_m') ;
 			// build email
 			$this->email->from('andy@grafixwerks.com', 'Andy Pearson') ;
 			$this->email->to($this->input->post('email')) ;
@@ -81,7 +81,7 @@ class User_c extends CI_Controller {
 			$this->email->message($message) ;
 			
 			// send user an email if temp_user added
-			if ($this->users_model->add_temp_user($confirm_code) ) {
+			if ($this->users_m->add_temp_user($confirm_code) ) {
 				if ($this->email->send() ) {
 					//echo 'msg sent' ;
 				} else {
@@ -108,11 +108,11 @@ class User_c extends CI_Controller {
 
 	// Check confirm_code from email against temp_users, add to users, send to user to 2nd form
 	public function register_user($confirm_code) {
-		$this->load->model('users_model') ;
+		$this->load->model('users_m') ;
 		// check if confirm_code is in temp_users
-		if ($this->users_model->is_code_valid($confirm_code)) {
+		if ($this->users_m->is_code_valid($confirm_code)) {
 			// pull data out of temp_users, put into users and delete from temp_users
-			if ($user_data = $this->users_model->add_user($confirm_code) ) {
+			if ($user_data = $this->users_m->add_user($confirm_code) ) {
 				$data = array(
 					'f_name' => $user_data['f_name'] ,
 					'l_name' => $user_data['l_name'] ,
@@ -122,7 +122,7 @@ class User_c extends CI_Controller {
 				) ;
 				// set session logged in
 				$this->session->set_userdata($data) ;
-				redirect('user_controller/confirm_registration') ;
+				redirect('user_c/confirm_registration') ;
 			} else echo 'failed to add user' ;
 		} else {
 			//echo 'bogus' ;
@@ -132,7 +132,7 @@ class User_c extends CI_Controller {
 
 	// Email confirmation code success page, has form to comlete profile
 	public function confirm_registration() {
-		$this->load->helper('form');
+		//$this->load->helper('form');
 		$data['title'] = 'Registration confirmed' ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('confirm_registration_v', $data) ;
@@ -182,11 +182,11 @@ class User_c extends CI_Controller {
 			//$this->load->view('upload_success', $data);
 		}
 		//////////////////////////////
-			$this->load->model('users_model');
-			$this->users_model->add_user_info($pic) ;
-			redirect('site_controller') ;
+			$this->load->model('users_m');
+			$this->users_m->add_user_info($pic) ;
+			redirect('/') ;
 		} else {
-			$this->load->helper('form');
+			//$this->load->helper('form');
 			$data['title'] = 'Registration confirmed' ;
 			$this->load->view('header_v', $data) ;
 			$this->load->view('confirm_registration_v', $data) ;
@@ -241,11 +241,11 @@ class User_c extends CI_Controller {
 			//$this->load->view('upload_success', $data);
 		}
 			// send form info to db
-			$this->load->model('users_model');
-			//$this->users_model->update_user($pic) ;
+			$this->load->model('users_m');
+			//$this->users_m->update_user($pic) ;
 			redirect('/profile') ;
 		} else {
-			$this->load->helper('form');
+			//$this->load->helper('form');
 			$data['title'] = 'Registration confirmed' ;
 			$this->load->view('header_v', $data) ;
 			$this->load->view('confirm_registration_v', $data) ;
@@ -258,7 +258,7 @@ class User_c extends CI_Controller {
 if ( ($this->session->userdata('is_logged_in')) == NULL ) {
 	redirect('/') ;
 }
-		$this->load->helper('form');
+		//$this->load->helper('form');
 		$data['title'] = 'Update Profile' ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('update_profile_v', $data) ;

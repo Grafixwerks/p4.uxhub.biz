@@ -5,12 +5,12 @@ $(document).ready(function(){
 
 
 	// login modal
-//	$('.login-link').click(function () {
-//		  $('#modal-login').show();
-//		  //$('#modal-login').css({ 'top':100+$(window).scrollTop() });
-//		  $('#shade').show().css({ opacity: 0.5, 'width':$(document).width(),'height':$(document).height()});
-//		  return false;
-//	}); 	
+	$('.login-link').click(function () {
+		  $('#modal-login').show();
+		  //$('#modal-login').css({ 'top':100+$(window).scrollTop() });
+		  $('#shade').show().css({ opacity: 0.5, 'width':$(document).width(),'height':$(document).height()});
+		  return false;
+	}); 	
 
 	// close login modal
 	$('.close').click(function () {
@@ -57,21 +57,43 @@ $(document).ready(function(){
 				required: true,
 				minlength : 6
 			},
-			pw_2: {
+			c_password: {
 				required: true,
 				minlength : 6,
-				equalTo : "#pw"
+				equalTo : "#password"
 			}
 		},
 		messages: {
 			f_name: "Please enter your first name.",
 			l_name: "Please enter your last name.",
-			email: "Please enter a valid email address."
+			email: "Please enter a valid email."
 		},
 		errorPlacement: function(error, element) {
 			 error.appendTo(element.parent());
 		}		
 	});
+
+
+
+	$("#login").validate({
+		rules: {	
+			email: {
+				required: true,
+				email: true
+			},
+			password: {
+				required: true,
+				minlength : 6
+			}
+		},
+		messages: {
+			email: "Please enter a valid email."
+		},
+		errorPlacement: function(error, element) {
+			 error.appendTo(element.parent());
+		}		
+	});
+
 
 
 }); // close document ready

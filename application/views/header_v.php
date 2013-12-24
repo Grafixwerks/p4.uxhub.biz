@@ -1,9 +1,18 @@
 <?php
 // site header
 // menu for user account
-$logged_in_menu = '<ul class="user-nav"><li><a href="/sign-out">Sign out</a></li><li>Logged in as <a href="#">Profile</a></li></ul>' ;
+$name = $this->session->userdata('f_name') ;
+$name .= ' ' ;
+$name .= $this->session->userdata('l_name') ;
 
-// user sign in link
+$logged_in_menu = '<ul class="user-nav">' ;
+$logged_in_menu .= '<li><a href="/sign-out">Sign out</a></li>' ;
+$logged_in_menu .= '<li><a href="/dashboard">Account dashboard</a></li>' ;
+$logged_in_menu .= '<li>Logged in as <a href="/profile">' ;
+$logged_in_menu .= $name ;
+$logged_in_menu .= '</a></li></ul>' ;
+
+// user sign in link 
 $sign_in_link = '<ul class="user-nav"><li><a href="/join">Join</a></li><li><a href="/sign-in" class="login-link">Sign in</a></li></ul>' ;
 
 // check if user is signed in and set main nav link
@@ -31,6 +40,10 @@ if ($this->session->userdata('is_logged_in')) {
 <?php echo $nav_link ; ?>
 </div><!-- close .header -->
 
+<?php 
 
+//		$data['title'] = $this->session->userdata('f_name') ;
+//		$data['title'] .= ' ' ;
+//		$data['title'] .= $this->session->userdata('l_name') ;
 
-
+?>
