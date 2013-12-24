@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://localhost';
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'Y6z564827S472AI9g68Mdt4GebB4hSHW';
 
 /*
 |--------------------------------------------------------------------------
@@ -315,7 +315,7 @@ $config['csrf_expire'] = 7200;
 | by the output class.  Do not 'echo' any values with compression enabled.
 |
 */
-$config['compress_output'] = FALSE;
+$config['compress_output'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
