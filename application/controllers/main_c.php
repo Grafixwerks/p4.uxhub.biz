@@ -1,0 +1,13 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Main_c extends CI_Controller {
+
+	/// homepage
+	public function index()
+	{
+		$data['title'] = 'Home' ;
+		$this->load->view('header_v', $data) ;
+		$this->load->view('home_v', $data) ;
+		$this->load->view('footer_v') ;
+	}
+} /////////////////////////
