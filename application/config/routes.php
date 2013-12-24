@@ -38,8 +38,18 @@
 |
 */
 
-$route['default_controller'] = "main_c";
+$route['default_controller'] = "main_c"; // homepage
 $route['404_override'] = '';
+
+
+$route['join'] = "user_c/join"; // Form to join
+
+$route['sign-in'] = "user_c"; // user sign in
+$route['sign-out'] = "user_c/sign_out"; // log out current user, redirect to HTTP referrer
+
+
+
+
 
 
 /* End of file routes.php */

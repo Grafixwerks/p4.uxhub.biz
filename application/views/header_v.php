@@ -1,10 +1,10 @@
 <?php
 // site header
 // menu for user account
-$logged_in_menu = '<ul class="user-nav"><li><a href="#">Log out</a></li><li>Logged in as <a href="#">Profile</a></li></ul>' ;
+$logged_in_menu = '<ul class="user-nav"><li><a href="/sign-out">Sign out</a></li><li>Logged in as <a href="#">Profile</a></li></ul>' ;
 
 // user sign in link
-$sign_in_link = '<ul class="user-nav"><li><a href="/join">Join</a></li><li><a href="/login" class="login-link">Login</a></li></ul>' ;
+$sign_in_link = '<ul class="user-nav"><li><a href="/join">Join</a></li><li><a href="/sign-in" class="login-link">Sign in</a></li></ul>' ;
 
 // check if user is signed in and set main nav link
 if ($this->session->userdata('is_logged_in')) {

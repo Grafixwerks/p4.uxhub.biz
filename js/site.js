@@ -5,12 +5,12 @@ $(document).ready(function(){
 
 
 	// login modal
-	$('.login-link').click(function () {
-		  $('#modal-login').show();
-		  //$('#modal-login').css({ 'top':100+$(window).scrollTop() });
-		  $('#shade').show().css({ opacity: 0.5, 'width':$(document).width(),'height':$(document).height()});
-		  return false;
-	}); 	
+//	$('.login-link').click(function () {
+//		  $('#modal-login').show();
+//		  //$('#modal-login').css({ 'top':100+$(window).scrollTop() });
+//		  $('#shade').show().css({ opacity: 0.5, 'width':$(document).width(),'height':$(document).height()});
+//		  return false;
+//	}); 	
 
 	// close login modal
 	$('.close').click(function () {
