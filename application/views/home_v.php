@@ -23,7 +23,7 @@
     </thead>
     <tbody>
 <?php 
-// list tweets
+// list ads
 foreach ($results as $ad): ?> 
   <tr>
     <td class="left"><a href="ad/<?php echo $ad->ad_id ; ?>"><?php echo $ad->headline ; ?></a></td>

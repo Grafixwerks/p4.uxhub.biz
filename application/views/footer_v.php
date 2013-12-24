@@ -3,14 +3,15 @@
 </div><!-- close .footer -->
 
 
+<?php if ($this->session->userdata('is_logged_in')) : ?>
+
+<?php else:  ?>
+
+<div id="shade">
+    &nbsp;
+</div><!--  Close shade  -->
 
 
-    <div id="shade">
-    	&nbsp;
-	</div><!--  Close shade  -->
-
-
-<!-- --> 
 <div id="modal-login" class="modal" style="display:none">
     
 <a href="javascript: void(0)" id="close" class="close">Close</a>
@@ -45,14 +46,15 @@ echo form_open('user_c/sign_in_validation', $attributes) ; ?>
     
     </div><!--close #modal-login -->
 
+<?php endif; ?>
 
 </div><!-- close .wrapper -->
 <br>
 
-    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
-    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>js/site.js"></script>
 
 </body>
 </html>

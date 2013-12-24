@@ -71,7 +71,7 @@ a img {
 }
 
 h1 {
-	font-size: 30px;
+	font-size: 24px;
 	color: #30576B;
 	margin-top: 10px;
 	margin-bottom: 15px;
@@ -353,7 +353,7 @@ body .wrapper .btn:hover {
 }
 .left-col-sm {
 	float: left;
-	width: 250px;
+	width: 300px;
 }
 .job-ad {
 	margin-top: 10px;
