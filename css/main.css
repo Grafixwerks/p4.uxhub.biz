@@ -429,7 +429,7 @@ body .wrapper .btn:hover {
 	width: 100px;
 }
 .th-head {
-	width: 475px;
+	width: 450px;
 }
 #reply {
 	float: left;
@@ -444,4 +444,10 @@ body .wrapper .btn:hover {
 }
 #send-message {
 	width: 500px;
+}
+.th-hour {
+	width: 60px;
+}
+.th-site {
+	width: 50px;
 }

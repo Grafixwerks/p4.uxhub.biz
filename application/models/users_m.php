@@ -185,4 +185,4 @@ class Users_m extends CI_Model {
 		return $query->result();
 		}
 
-} // close class Users_model
+} // close class Users_m

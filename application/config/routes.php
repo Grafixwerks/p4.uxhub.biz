@@ -53,7 +53,7 @@ $route['profile'] = "profile_c"; // logged in user profile
 $route['dashboard'] = "profile_c/dashboard" ; // logged in user dashboard for site
 $route['user/(:any)'] = "profile_c/user/$1"; // show profile of user by user_id
 
-
+$route['ad/(:any)'] = "ad_c/ad/$1"; // show 1 ad
 
 
 /* End of file routes.php */
