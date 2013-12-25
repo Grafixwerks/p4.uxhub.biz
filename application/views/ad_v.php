@@ -31,7 +31,7 @@ $description  = $this->typography->auto_typography($ad->description);
  echo $description ;
   ?>
 <?php if ($this->session->userdata('is_logged_in')) : ?>
-<a href="/reply/<?php echo $ad->ad_id ; ?>" class="btn">Reply</a>
+<a href="/ad-reply/<?php echo $ad->ad_id ; ?>" class="btn">Reply</a>
 <?php else:  ?>
 
 <p><a href="/join">Join</a> or <a href="/sign-in" class="login-link">sign in</a> to reply.</p>

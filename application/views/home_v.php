@@ -9,7 +9,10 @@
 ?>
 
 <h1>NYC tech job board</h1>
+<?php if ($this->session->userdata('is_logged_in')) : ?>
+<a href="/create-ad" class="btn home-create">Create ad</a>
 
+<?php endif; ?>
 <table class="tablesorter listing">
     <thead>
   <tr>

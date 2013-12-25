@@ -451,3 +451,9 @@ body .wrapper .btn:hover {
 .th-site {
 	width: 50px;
 }
+.home-create {
+	display: block;
+	width:110px;
+	margin-bottom: 20px;
+	text-align: center;
+}

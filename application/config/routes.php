@@ -54,7 +54,7 @@ $route['dashboard'] = "profile_c/dashboard" ; // logged in user dashboard for si
 $route['user/(:any)'] = "profile_c/user/$1"; // show profile of user by user_id
 
 $route['ad/(:any)'] = "ad_c/ad/$1"; // show 1 ad
-
+$route['ad-reply/(:any)'] = "message_c/ad_reply/$1"; // reply to ad
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

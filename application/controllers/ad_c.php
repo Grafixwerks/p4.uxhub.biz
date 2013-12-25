@@ -4,6 +4,7 @@ class Ad_c extends CI_Controller {
 	// view one ad
 	public function ad($ad_id)
 	{
+		$this->load->library('typography');
 		$this->load->model('ads_m');
 		$data['results'] = $this->ads_m->one_ad($ad_id) ;
 		$data['title'] = 'Ad' ;
@@ -21,4 +22,4 @@ class Ad_c extends CI_Controller {
 } /////////////////////
 
 
-	// Edit a tweet
+

@@ -11,7 +11,7 @@ class Ads_m extends CI_Model {
 		}
 	// Get one ad by id
 	function one_ad($ad_id) {
-		$this->load->library('typography');
+		//$this->load->library('typography');
 		$this->db->select('*');
 		$this->db->from('ads');
 		$this->db->where('ads.ad_id', $ad_id); 
