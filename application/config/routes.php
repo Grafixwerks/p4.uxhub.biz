@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "main_c"; // homepage
 $route['404_override'] = '';
+$route['error'] = "main_c/error"; // generic error
 
 $route['sign-in'] = "user_c"; // user sign in
 $route['join'] = "user_c/join"; // Form to join
@@ -55,6 +56,7 @@ $route['user/(:any)'] = "profile_c/user/$1"; // show profile of user by user_id
 
 $route['ad/(:any)'] = "ad_c/ad/$1"; // show 1 ad
 $route['ad-reply/(:any)'] = "message_c/ad_reply/$1"; // reply to ad
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

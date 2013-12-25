@@ -13,9 +13,14 @@ class Main_c extends CI_Controller {
 		$this->load->view('footer_v') ;
 	}
 
-
-
-
+	/// error
+	public function error()
+	{
+		$data['title'] = 'Error' ;
+		$this->load->view('header_v', $data) ;
+		$this->load->view('error_v', $data) ;
+		$this->load->view('footer_v') ;
+	}
 
 
 

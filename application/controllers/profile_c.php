@@ -8,23 +8,25 @@ class Profile_c extends CI_Controller {
 		if ( ($this->session->userdata('is_logged_in') == NULL) ) {
 			redirect('/') ;
 		}
-		$data['title'] = $this->session->userdata('f_name') ;
-		$data['title'] .= ' ' ;
-		$data['title'] .= $this->session->userdata('l_name') ;
+		$this->load->model('users_m');
+		$data['results'] = $this->users_m->get_user($this->session->userdata('user_id')) ;	
+		$data['title'] = "User Profile" ;
 		$this->load->view('header_v', $data) ;
-		$this->load->view('profile_v', $data) ;
+		$this->load->view('user_v', $data) ;
 		$this->load->view('footer_v') ;
+//		$data['title'] = $this->session->userdata('f_name') ;
+//		$data['title'] .= ' ' ;
+//		$data['title'] .= $this->session->userdata('l_name') ;
+//		$this->load->view('header_v', $data) ;
+//		$this->load->view('profile_v', $data) ;
+//		$this->load->view('footer_v') ;
 	}
 
 	// User profile page
 	public function user($user_id)
 	{
 		$this->load->model('users_m');
-
-		if ( $this->session->userdata('user_id') == $user_id ) {
-			redirect('profile') ;
-		}
-			
+		$data['results'] = $this->users_m->get_user($user_id) ;	
 		$data['title'] = "User Profile" ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('user_v', $data) ;

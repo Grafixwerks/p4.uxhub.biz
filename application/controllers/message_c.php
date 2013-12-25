@@ -31,8 +31,7 @@ class Message_c extends CI_Controller {
 			} else redirect('/error') ;	
 
 		} else {
-		redirect('/no-validation') ;
-		//redirect('/error') ;	
+		redirect('/error') ;	
 			}
 	}
 

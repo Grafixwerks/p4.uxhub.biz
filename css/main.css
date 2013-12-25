@@ -457,3 +457,55 @@ body .wrapper .btn:hover {
 	margin-bottom: 20px;
 	text-align: center;
 }
+
+/* user profile */
+.user-pic {
+	float: left;
+	border: 1px solid #FF6600;
+	background-color:#FF6600;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.profile {
+	float: right;
+	width: 490px;
+	min-height: 400px;
+	margin-right: 200px;
+}
+.profile-left {
+	float: left;
+	width: 130px;
+}
+.profile h3 {
+	font-size: 16px;
+	text-align: right;
+	float: left;
+	width: 80px;
+	clear: left;
+	margin-top: 0px;
+	line-height: 16px;
+	height: 16px;
+	margin-bottom: 10px;
+}
+.profile p {
+	float: right;
+	width: 400px;
+	clear: right;
+	font-size: 14px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.profile p.bio-text {
+	line-height: 20px;
+}
+.btn-edit-profile {
+	display: block;
+	clear: both;
+	width: 185px;
+	text-align: center;
+}
+
+
+
