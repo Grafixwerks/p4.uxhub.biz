@@ -259,9 +259,9 @@ if ( ($this->session->userdata('is_logged_in')) == NULL ) {
 	redirect('/') ;
 }
 		//$this->load->helper('form');
-		$data['title'] = 'Update Profile' ;
+		$data['title'] = 'Edit Account Profile' ;
 		$this->load->view('header_v', $data) ;
-		$this->load->view('update_profile_v', $data) ;
+		$this->load->view('edit_profile_v', $data) ;
 		$this->load->view('footer_v') ;
 	}
 

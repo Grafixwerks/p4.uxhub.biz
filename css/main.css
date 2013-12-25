@@ -124,6 +124,7 @@ table.tablesorter  {
 	margin: 0px;
 	padding: 0px;
 	font-size: 14px;
+	border: 1px solid #30576B;
 }
 .tablesorter th {
 	padding: 2px 20px 2px 0px;
@@ -461,7 +462,7 @@ body .wrapper .btn:hover {
 /* user profile */
 .user-pic {
 	float: left;
-	border: 1px solid #FF6600;
+	border: 1px solid #30576B;
 	background-color:#FF6600;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;

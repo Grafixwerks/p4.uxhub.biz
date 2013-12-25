@@ -46,17 +46,18 @@ $route['sign-in'] = "user_c"; // user sign in
 $route['join'] = "user_c/join"; // Form to join
 $route['join-success'] = "user_c/join_success"; // confirmation of form submission 
 $route['confirm/(:any)'] = "user_c/register_user/$1"; // confirm email code, send to 2nd form
-$route['update-profile'] = "user_c/update_profile"; // edit logged in user profile
+$route['edit-profile'] = "user_c/update_profile"; // edit logged in user profile
 $route['sign-out'] = "user_c/sign_out"; // log out current user, redirect to HTTP referrer
 
-
-$route['profile'] = "profile_c"; // logged in user profile
+$route['profile'] = "profile_c"; // user profile
 $route['dashboard'] = "profile_c/dashboard" ; // logged in user dashboard for site
 $route['user/(:any)'] = "profile_c/user/$1"; // show profile of user by user_id
 
+$route['create-ad'] = "ad_c/create"; // create new ad
 $route['ad/(:any)'] = "ad_c/ad/$1"; // show 1 ad
-$route['ad-reply/(:any)'] = "message_c/ad_reply/$1"; // reply to ad
 
+$route['ad-reply/(:any)'] = "message_c/ad_reply/$1"; // reply to ad
+$route['message-sent'] = "message_c/confirm"; // confirm reply
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

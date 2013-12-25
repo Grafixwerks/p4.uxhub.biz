@@ -24,8 +24,6 @@ class Message_m extends CI_Model {
 		) ;	
 		$this->db->join('users', 'users.user_id = messages.from');
 		$q_message = $this->db->get_where('messages' , $data) ;
-		
-		
 		return $q_message->result();
 	}
 

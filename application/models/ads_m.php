@@ -9,9 +9,9 @@ class Ads_m extends CI_Model {
 		$qAds =  $this->db->get() ;
 		return $qAds->result();
 		}
+	
 	// Get one ad by id
 	function one_ad($ad_id) {
-		//$this->load->library('typography');
 		$this->db->select('*');
 		$this->db->from('ads');
 		$this->db->where('ads.ad_id', $ad_id); 
@@ -30,6 +30,28 @@ class Ads_m extends CI_Model {
 		return $qAds->result();
 		}
 
-
+	// new ad
+	public function new_ad()
+	{
+		$data = array (
+			'headline'		=> $this->input->post('headline') ,
+			'description'		=> $this->input->post('description') ,
+			'user_id'		=> $this->session->userdata('user_id') ,
+			'location'		=> $this->input->post('location') ,
+			'level'		=> $this->input->post('level') ,
+			'type'		=> $this->input->post('type') ,
+			'hours'		=> $this->input->post('hours') ,
+			'on_site'		=> $this->input->post('on_site') ,
+		) ;
+		$query = $this->db->insert('ads' , $data) ;
+		if ($query) {
+			return true ;
+		} else {
+			return false ;
+		}
+	}
 
 } // close class Ads_m
+
+
+

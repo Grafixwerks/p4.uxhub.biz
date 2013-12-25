@@ -95,6 +95,15 @@ $(document).ready(function(){
 	});
 
 
+	// confirm delete 
+	$(".del").click(function () {
+		//alert('delete!');
+		if (confirm('Are you sure you want to delete')) {
+			//
+			return true ;
+		}
+		return false;
+	});
+
 
 }); // close document ready
-  

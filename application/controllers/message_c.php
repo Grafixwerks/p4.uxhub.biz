@@ -13,8 +13,6 @@ class Message_c extends CI_Controller {
 		$this->load->view('footer_v') ;
 	}
 
-
-
 	// Add new message 
 	public function reply_validation() {
 		$this->load->library('form_validation') ;
@@ -35,7 +33,14 @@ class Message_c extends CI_Controller {
 			}
 	}
 
-
+	// confirm
+	public function confirm()
+	{
+		$data['title'] = 'Message sent' ;
+		$this->load->view('header_v', $data) ;
+		$this->load->view('confirm_v') ;
+		$this->load->view('footer_v') ;
+	}
 
 
 
