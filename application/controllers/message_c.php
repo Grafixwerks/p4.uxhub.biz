@@ -53,7 +53,30 @@ class Message_c extends CI_Controller {
 		$this->load->view('footer_v') ;
 	}
 
+	// message-reply
+	public function reply($message_id)
+	{
+		$this->load->model('message_m');
+		$data['results'] = $this->message_m->one_message($message_id) ;
+		$data['title'] = 'Message' ;
+		$this->load->view('header_v', $data) ;
+		$this->load->view('reply_v') ;
+		$this->load->view('footer_v') ;
+	}
+
+
+	// Delete 1 message
+	public function delete($message_id)
+	{
+		if ( ($this->session->userdata('is_logged_in')) == NULL ) {
+			redirect('/') ;
+		}
+		$this->load->model('message_m');
+		$this->message_m->delete_message($message_id) ;
+		redirect('dashboard') ;
+	}
+
+
+
 } /////////////////////
-
-
 

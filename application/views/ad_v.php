@@ -30,7 +30,9 @@
 $description  = $this->typography->auto_typography($ad->description);
  echo $description ;
   ?>
-<?php if ($this->session->userdata('is_logged_in')) : ?>
+<?php if ($this->session->userdata('user_id') ==  $ad->user_id)  : ?>
+
+<?php elseif ($this->session->userdata('is_logged_in')) : ?>
 <a href="/ad-reply/<?php echo $ad->ad_id ; ?>" class="btn">Reply</a>
 <?php else:  ?>
 

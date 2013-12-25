@@ -49,7 +49,7 @@ $name .= $this->session->userdata('l_name') ;
 
 <?php endif; ?>
 
-<h2>Your Messages</h2>
+<h2>Your inbox</h2>
 
 <?php if ($inbox == NULL) : ?>
 

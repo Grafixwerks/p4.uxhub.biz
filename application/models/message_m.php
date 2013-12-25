@@ -49,4 +49,27 @@ class Message_m extends CI_Model {
 		}
 
 
+
+
+
+
+	// delete 1 message
+	public function delete_message($message_id) {
+		$data = array (
+			'to'	=> $this->session->userdata('user_id') ,
+			'message_id'	=> $message_id ,
+		) ;
+		$query = $this->db->delete('messages' , $data) ;
+		if ($query) {
+			return true ;
+		} else {
+			redirect('error') ;
+		}
+	}
+
+
+
+
+
+
 } // close class Message_m

@@ -91,7 +91,7 @@ if(empty($results)){
 
 <?php echo $bio ; ?>
 
-<?php if (  ($this->session->userdata('is_logged_in')) == ( $user->user_id )  ) : ?>
+<?php if (  ($this->session->userdata('user_id')) == ( $user->user_id )  ) : ?>
 <a href="/edit-profile" class="btn btn-edit-profile">Edit your profile</a>
 <?php endif; ?>
 

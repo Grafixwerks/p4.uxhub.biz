@@ -55,11 +55,27 @@ $route['user/(:any)'] = "profile_c/user/$1"; // show profile of user by user_id
 
 $route['create-ad'] = "ad_c/create"; // create new ad
 $route['ad/(:any)'] = "ad_c/ad/$1"; // show 1 ad
+$route['ad-created'] = "ad_c/created"; // ad created confirmation
+$route['delete-ad/(:any)'] = "ad_c/delete/$1"; // delete 1 ad
+$route['edit-ad/(:any)'] = "ad_c/edit/$1"; // edit 1 ad
 
 $route['ad-reply/(:any)'] = "message_c/ad_reply/$1"; // reply to ad
 $route['message-sent'] = "message_c/confirm"; // confirm reply
 $route['view-message/(:any)'] = "message_c/view/$1"; // view message
+$route['message-reply/(:any)'] = "message_c/reply/$1"; // reply to message
+$route['delete-message/(:any)'] = "message_c/delete/$1"; // delete 1 message
 
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
+
+
+
+
+
+
+
+
+
+
+
