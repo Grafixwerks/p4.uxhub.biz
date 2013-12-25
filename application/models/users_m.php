@@ -129,7 +129,7 @@ class Users_m extends CI_Model {
 	// take data profile update form add to users
 	public function update_user($pic) {
 		$user_id = $this->session->userdata('user_id') ;
-		if ( $pic == NULL ) {
+		if ( $pic == '' ) {
 			$data = array (
 				'f_name' 	=> $this->input->post('f_name') ,
 				'l_name' 	=> $this->input->post('l_name') ,
@@ -138,6 +138,7 @@ class Users_m extends CI_Model {
 				'city'		=> $this->input->post('city') ,
 				'state'		=> $this->input->post('state') ,
 				'website'	=> $this->input->post('website') 
+//				'pic' => 'unk-user.png' ,
 			) ;
 		} else {
 			$data = array (
@@ -145,7 +146,8 @@ class Users_m extends CI_Model {
 				'l_name' 	=> $this->input->post('l_name') ,
 				'email' 	=> $this->input->post('email') ,
 				'bio'		=> $this->input->post('bio') ,
-				'pic' => $pic ,
+				//'pic' 		=> 'unk-user.png' ,
+				'pic' 		=> $pic ,
 				'city'		=> $this->input->post('city') ,
 				'state'		=> $this->input->post('state') ,
 				'website'	=> $this->input->post('website') 

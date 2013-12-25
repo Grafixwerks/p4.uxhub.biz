@@ -62,7 +62,7 @@ $state = $this->session->userdata('state') ;
 $website = $this->session->userdata('website') ;
 $bio = $this->session->userdata('bio') ;
 
-$attributes = array('class' => 'success', 'id' => 'success');
+$attributes = array('id' => 'edit-profile');
 ?>
 <div class="main">
 
@@ -70,7 +70,7 @@ $attributes = array('class' => 'success', 'id' => 'success');
 
 <h1>Edit profile</h1>
 
-<?php echo form_open_multipart('user_controller/update_user_validation', $attributes) ; ?>
+<?php echo form_open_multipart('user_c/update_user_validation', $attributes) ; ?>
    
 <?php echo validation_errors('<div class="error">', '</div>') ; ?>   
 
@@ -81,44 +81,44 @@ $attributes = array('class' => 'success', 'id' => 'success');
     <legend>Account information</legend>
 
     <div class="text-group">
-      <label for="f_name" class="success-label">First Name:</label>
+      <label for="f_name" >First Name:</label>
       <input type="text" name="f_name" value="<?php echo $f_name ; ?>" id="f_name"  class="txt"title="first name" maxlength="30" />
     </div><!-- .text-group -->
     
     
     <div class="text-group">
-      <label for="l_name" class="success-label">Last Name:</label>
+      <label for="l_name" >Last Name:</label>
       <input type="text" name="l_name" value="<?php echo $l_name ; ?>" id="l_name"  class="txt" title="last name" maxlength="30" />
     </div><!-- .text-group -->
     
 
     <div class="text-group">
-      <label for="email" class="success-label">E-Mail:</label>
+      <label for="email" >E-Mail:</label>
       <input type="text" name="email" value="<?php echo $email ; ?>" id="email" maxlength="100" class="txt" title="email" /><!--autocomplete="off"-->
     </div><!-- .text-group -->
     
     
 
     <div class="text-group">
-      <label for="city" class="success-label">City:</label>
+      <label for="city" >City:</label>
       <input type="text" name="city" id="city" value="<?php echo $city ; ?>"  class="txt" maxlength="30" />
     </div><!-- .text-group -->
 
 
     <div class="text-group">
-      <label for="state" class="success-label">State:</label>
+      <label for="state" >State:</label>
       <div class="dropdown"><?php echo form_dropdown('state', $options, $state); ?></div><!-- .dropdown -->
     </div><!-- .text-group -->
     
 
     <div class="text-group">
-      <label for="website" class="success-label">Website:</label>
+      <label for="website" >Website:</label>
       <input type="text" name="website" id="website" value="<?php echo $website ; ?>" class="txt" maxlength="50" />
     </div><!-- .text-group -->
 
 
     <div class="text-group">
-      <label for="userfile" class="success-label">Picture:</label>
+      <label for="userfile" >Picture:</label>
       <input type="file" name="userfile" id="userfile" size="50" class="txt"  />
     </div><!-- .text-group -->
 
@@ -126,8 +126,8 @@ $attributes = array('class' => 'success', 'id' => 'success');
 
 
     <div class="text-group">
-      <label for="bio" class="success-label">Bio:</label>
-      <textarea name="bio" id="bio" class="bio" ><?php echo $bio ; ?></textarea>
+      <label for="bio" >Bio:</label>
+      <textarea name="bio" id="bio" class="bio txt" ><?php echo $bio ; ?></textarea>
     </div><!-- .text-group -->
     
    

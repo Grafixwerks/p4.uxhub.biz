@@ -501,12 +501,53 @@ body .wrapper .btn:hover {
 .profile p.bio-text {
 	line-height: 20px;
 }
+
 .btn-edit-profile {
 	display: block;
 	clear: both;
 	width: 185px;
 	text-align: center;
 }
-
-
-
+#edit-profile {
+	width: 460px;
+}
+#edit-profile label {
+	text-align: right;
+	display: block;
+	float: left;
+	width: 100px;
+	margin-right: 5px;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 3px;
+}
+/*.main-content p {
+	font-size: 14px;
+}*/
+#update {
+	float: right;
+}
+/*.edit-profile {
+	float:left;
+	clear:both;
+	width:130px;
+	font-size:14px;
+	text-align:center;
+}*/
+#edit-profile .text-group  {
+	clear:both;
+	margin-bottom: 10px;
+}
+#edit-profile legend {
+	font-size: 1px;
+	text-indent: -9999px;
+	margin: 0px;
+	padding: 0px;
+}
+#edit-profile .txt {
+	width: 320px;
+}
+#edit-profile .bio {
+	width: 320px;
+	height:100px;
+}

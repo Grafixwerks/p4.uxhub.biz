@@ -4,7 +4,6 @@ class User_c extends CI_Controller {
 
 	// Sign in form page
 	public function index() {
-		//$this->load->helper('form');
 		$data['title'] = 'Sign in' ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('sign_in_v', $data) ;
@@ -132,7 +131,6 @@ class User_c extends CI_Controller {
 
 	// Email confirmation code success page, has form to comlete profile
 	public function confirm_registration() {
-		//$this->load->helper('form');
 		$data['title'] = 'Registration confirmed' ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('confirm_registration_v', $data) ;
@@ -194,7 +192,7 @@ class User_c extends CI_Controller {
 			}
 	}
 
-	// Process logged in user profile edit
+	//  profile edit for logged in user
 	public function update_user_validation() {
 		$this->load->library('form_validation') ;
 		$this->form_validation->set_rules('f_name', 'First name', 'required|trim|xss_clean|strip_tags|max_length[30]') ;
@@ -239,22 +237,21 @@ class User_c extends CI_Controller {
 			// grab image name to send to db
 			$pic = $image_data['file_name'] ;
 			//$this->load->view('upload_success', $data);
+			
 		}
 			// send form info to db
 			$this->load->model('users_m');
-			//$this->users_m->update_user($pic) ;
+			//$this->users_m->update_user('unk-user.png') ;
+			$this->users_m->update_user($pic) ;
+			
 			redirect('/profile') ;
 		} else {
-			//$this->load->helper('form');
-			$data['title'] = 'Registration confirmed' ;
-			$this->load->view('header_v', $data) ;
-			$this->load->view('confirm_registration_v', $data) ;
-			$this->load->view('footer_v') ;
+			redirect('/error') ;
 			}
 	}
 
 	// Update profile page
-	public function update_profile() {
+	public function edit_profile() {
 if ( ($this->session->userdata('is_logged_in')) == NULL ) {
 	redirect('/') ;
 }

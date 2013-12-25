@@ -46,7 +46,7 @@ $route['sign-in'] = "user_c"; // user sign in
 $route['join'] = "user_c/join"; // Form to join
 $route['join-success'] = "user_c/join_success"; // confirmation of form submission 
 $route['confirm/(:any)'] = "user_c/register_user/$1"; // confirm email code, send to 2nd form
-$route['edit-profile'] = "user_c/update_profile"; // edit logged in user profile
+$route['edit-profile'] = "user_c/edit_profile"; // edit logged in user profile
 $route['sign-out'] = "user_c/sign_out"; // log out current user, redirect to HTTP referrer
 
 $route['profile'] = "profile_c"; // user profile
