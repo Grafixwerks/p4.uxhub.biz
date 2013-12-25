@@ -58,6 +58,8 @@ $route['ad/(:any)'] = "ad_c/ad/$1"; // show 1 ad
 
 $route['ad-reply/(:any)'] = "message_c/ad_reply/$1"; // reply to ad
 $route['message-sent'] = "message_c/confirm"; // confirm reply
+$route['view-message/(:any)'] = "message_c/view/$1"; // view message
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

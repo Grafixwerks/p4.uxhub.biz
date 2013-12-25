@@ -551,3 +551,8 @@ body .wrapper .btn:hover {
 	width: 320px;
 	height:100px;
 }
+.left-med {
+	width: 450px;
+	clear: both;
+	float: left;
+}

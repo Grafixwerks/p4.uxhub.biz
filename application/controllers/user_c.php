@@ -74,8 +74,8 @@ class User_c extends CI_Controller {
 			// build email
 			$this->email->from('andy@grafixwerks.com', 'Andy Pearson') ;
 			$this->email->to($this->input->post('email')) ;
-			$this->email->subject('Confirm your Holy Tweet account.') ;
-			$message = '<p>Thank you for joining Holy Tweet!</p>' ;
+			$this->email->subject('Confirm your Jobzr account.') ;
+			$message = '<p>Thank you for joining Jobzr!</p>' ;
 			$message .= '<p><a href="'.base_url().'/confirm/'.$confirm_code.'">Click here</a> to confirm your account.</p>' ;
 			$this->email->message($message) ;
 			

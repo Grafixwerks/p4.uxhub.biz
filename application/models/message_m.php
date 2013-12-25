@@ -28,7 +28,25 @@ class Message_m extends CI_Model {
 	}
 
 
+//	public function get_message($message_id) {
+//		$data = array (
+//			'message_id'	=> $message_id
+//		) ;	
+//		$this->db->join('users', 'users.user_id = messages.from');
+//		$q_message = $this->db->get_where('messages' , $data) ;
+//		return $q_message->result();
+//	}
 
+
+	// Get one message by message_id
+	public function one_message($message_id) {
+		$this->db->select('*');
+		$this->db->from('messages');
+		$this->db->where('messages.message_id', $message_id); 
+		$this->db->join('users', 'users.user_id = messages.from');
+		$q_ad =  $this->db->get() ;
+		return $q_ad->result();
+		}
 
 
 } // close class Message_m

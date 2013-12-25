@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Message_c extends CI_Controller {
-	// view one ad
+	// ad reply
 	public function ad_reply($ad_id)
 	{
 		$this->load->model('ads_m');
@@ -13,7 +13,7 @@ class Message_c extends CI_Controller {
 		$this->load->view('footer_v') ;
 	}
 
-	// Add new message 
+	// send new message 
 	public function reply_validation() {
 		$this->load->library('form_validation') ;
 		$this->form_validation->set_rules('subject', 'Subject', 'required|trim|xss_clean|max_length[100]|strip_tags') ;
@@ -33,7 +33,7 @@ class Message_c extends CI_Controller {
 			}
 	}
 
-	// confirm
+	// confirm message sent
 	public function confirm()
 	{
 		$data['title'] = 'Message sent' ;
@@ -42,8 +42,16 @@ class Message_c extends CI_Controller {
 		$this->load->view('footer_v') ;
 	}
 
-
-
+	// view-message
+	public function view($message_id)
+	{
+		$this->load->model('message_m');
+		$data['results'] = $this->message_m->one_message($message_id) ;
+		$data['title'] = 'Message' ;
+		$this->load->view('header_v', $data) ;
+		$this->load->view('message_v') ;
+		$this->load->view('footer_v') ;
+	}
 
 } /////////////////////
 
