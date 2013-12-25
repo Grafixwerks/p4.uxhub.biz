@@ -18,6 +18,19 @@ class Message_m extends CI_Model {
 		}
 	}
 
+	public function get_messages() {
+		$data = array (
+			'to'	=> $this->session->userdata('user_id')
+		) ;	
+		$this->db->join('users', 'users.user_id = messages.from');
+		$q_message = $this->db->get_where('messages' , $data) ;
+		
+		
+		return $q_message->result();
+	}
+
+
+
 
 
 } // close class Message_m

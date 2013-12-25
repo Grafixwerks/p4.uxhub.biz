@@ -18,7 +18,7 @@ class User_c extends CI_Controller {
 		$this->form_validation->set_rules('password', 'Password', 'required|md5|trim') ;
 		// if passes validation go to home page
 		if ($this->form_validation->run() == TRUE) {
-			redirect('/') ;
+			redirect($_SERVER['HTTP_REFERER']) ;
 		} else {
 			$data['title'] = 'Sign in' ;
 			$this->load->view('header_v', $data) ;

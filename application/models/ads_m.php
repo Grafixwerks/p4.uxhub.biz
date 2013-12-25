@@ -20,16 +20,15 @@ class Ads_m extends CI_Model {
 		return $q_ad->result();
 		}
 
-
-//
-//
-//	function get_user($user_id) {
-//		$this->db->from('users');
-//		$this->db->where('users.user_id', $user_id); 
-//		$this->db->join('tweets', 'tweets.user_id = users.user_id', 'left');
-//		$query =  $this->db->get() ;
-//		return $query->result();
-//		}
+	// Get ads by user_id
+	function get_adz($user_id) {
+		$this->db->select('ad_id, headline, date, location, level, type, hours, on_site');
+		$this->db->from('ads');
+		$this->db->where('ads.user_id', $user_id); 
+		$this->db->order_by("date", "desc");
+		$qAds =  $this->db->get() ;
+		return $qAds->result();
+		}
 
 
 

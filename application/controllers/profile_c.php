@@ -38,13 +38,12 @@ class Profile_c extends CI_Controller {
 		if ( ($this->session->userdata('is_logged_in') == NULL) ) {
 			redirect('/') ;
 		}
-		$this->load->model('users_m');
-
+		$this->load->model('ads_m');
+		$this->load->model('message_m');
 		$user_id = $this->session->userdata('user_id') ;
-		// get users followed by logged in user
-//		$data['results_following'] = $this->followers_model->get_following_dash() ;
-//		$data['results_follower'] = $this->followers_model->get_follower() ;
-		$data['title'] = "User Dashboard" ;
+		$data['results'] = $this->ads_m->get_adz($user_id) ;	
+		$data['inbox'] = $this->message_m->get_messages() ;
+		$data['title'] = "Account Dashboard" ;
 		$this->load->view('header_v', $data) ;
 		$this->load->view('dashboard_v', $data) ;
 		$this->load->view('footer_v') ;

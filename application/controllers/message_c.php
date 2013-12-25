@@ -26,8 +26,8 @@ class Message_c extends CI_Controller {
 			$this->load->model('message_m');
 			
 			if ($this->message_m->new_reply() ) {
-				//redirect($_SERVER['HTTP_REFERER']) ;
-				echo '<h1>success</h1>' ;
+				redirect('/message-sent') ;	
+				
 			} else redirect('/error') ;	
 
 		} else {

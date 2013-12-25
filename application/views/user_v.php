@@ -92,10 +92,8 @@ if(empty($results)){
 <?php echo $bio ; ?>
 
 <?php if ($this->session->userdata('is_logged_in')) : ?>
-<p>logged in</p>
-<?php endif; ?>
 <a href="/edit-profile" class="btn btn-edit-profile">Edit your profile</a>
-
+<?php endif; ?>
 
 </div><!-- .profile -->
 
