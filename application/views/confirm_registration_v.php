@@ -54,6 +54,7 @@ $options = array(
         'WI' => 'Wisconsin',
         'WY' => 'Wyoming'
 );
+$id = 'id="state"';
 $f_name = $this->session->userdata('f_name') ;
 $attributes = array('class' => 'success', 'id' => 'success');
 ?>
@@ -61,7 +62,7 @@ $attributes = array('class' => 'success', 'id' => 'success');
 
     <h1>Welcome to Jobzr <?php echo html_escape($f_name) ; ?>.</h1>
     
-    <p>Please take a minute to complete your profile so people know who you are. Or <a href="/">skip this</a> for now.</p>
+    <p>Please take a minute to complete your profile so people know who you are. Or <a href="/dashboard">skip this</a> for now.</p>
 
 
 
@@ -77,40 +78,40 @@ $attributes = array('class' => 'success', 'id' => 'success');
     <legend>Account information</legend>
 
 
-    <div class="text-group">
+    <div class="form-field">
       <label for="city" class="success-label">City:</label>
-      <input type="text" name="city" id="city" value="<?php echo set_value('city'); ?>"  class="txt" maxlength="30" />
-    </div><!-- .text-group -->
+      <input type="text" name="city" id="city" value="<?php echo set_value('city'); ?>"  class="med txt" maxlength="30" />
+    </div><!-- .form-field -->
 
 
-    <div class="text-group">
+    <div class="form-field">
       <label for="state" class="success-label">State:</label>
-      <div class="dropdown"><?php echo form_dropdown('state', $options); ?></div><!-- .dropdown -->
-    </div><!-- .text-group -->
+      <div class="dropdown"><?php echo form_dropdown('state', $options, '0', $id) ; ?></div><!-- .dropdown -->
+    </div><!-- .form-field -->
     
 
-    <div class="text-group">
+    <div class="form-field">
       <label for="website" class="success-label">Website:</label>
-      <input type="text" name="website" id="website" value="<?php echo set_value('website'); ?>" class="txt" maxlength="50" />
-    </div><!-- .text-group -->
+      <input type="text" name="website" id="website" value="<?php echo set_value('website'); ?>" class="med txt" maxlength="50" />
+    </div><!-- .form-field -->
 
 
-    <div class="text-group">
+    <div class="form-field">
       <label for="company" class="success-label">Company:</label>
-      <input type="text" name="company" id="company" value="<?php echo set_value('company'); ?>" class="txt" maxlength="30" />
-    </div><!-- .text-group -->
+      <input type="text" name="company" id="company" value="<?php echo set_value('company'); ?>" class="med txt" maxlength="30" />
+    </div><!-- .form-field -->
 
 
-    <div class="text-group">
+    <div class="form-field">
       <label for="userfile" class="success-label">Picture:</label>
-      <input type="file" name="userfile" id="userfile" size="50" class="txt"  />
-    </div><!-- .text-group -->
+      <input type="file" name="userfile" id="userfile" size="50" class="med txt"  />
+    </div><!-- .form-field -->
 
 
-    <div class="text-group">
+    <div class="form-field">
       <label for="bio" class="success-label">Bio:</label>
-      <textarea name="bio" id="bio" class="bio" ><?php echo set_value('bio'); ?></textarea>
-    </div><!-- .text-group -->
+      <textarea name="bio" id="bio" class="bio txt" ><?php echo set_value('bio'); ?></textarea>
+    </div><!-- .form-field -->
     
    
     

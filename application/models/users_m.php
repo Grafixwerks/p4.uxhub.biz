@@ -24,6 +24,7 @@ class Users_m extends CI_Model {
 				'city'			=> $row->city ,
 				'state'			=> $row->state ,
 				'website'		=> $row->website ,
+				'company'		=> $row->company ,
 				'is_logged_in'	=> 1 
 				) ;
 			$this->session->set_userdata($data);
@@ -115,6 +116,7 @@ class Users_m extends CI_Model {
 			'city'		=> $this->input->post('city') ,
 			'state'		=> $this->input->post('state') ,
 			'website'	=> $this->input->post('website') ,
+			'company'	=> $this->input->post('company') ,
 		) ;
 		$this->db->where('user_id' , $user_id ) ;
 		$query = $this->db->update('users' , $data) ;
@@ -137,6 +139,7 @@ class Users_m extends CI_Model {
 				'bio'		=> $this->input->post('bio') ,
 				'city'		=> $this->input->post('city') ,
 				'state'		=> $this->input->post('state') ,
+				'company'		=> $this->input->post('company') ,
 				'website'	=> $this->input->post('website') 
 //				'pic' => 'unk-user.png' ,
 			) ;
@@ -150,6 +153,7 @@ class Users_m extends CI_Model {
 				'pic' 		=> $pic ,
 				'city'		=> $this->input->post('city') ,
 				'state'		=> $this->input->post('state') ,
+				'company'		=> $this->input->post('company') ,
 				'website'	=> $this->input->post('website') 
 			) ;	
 		}

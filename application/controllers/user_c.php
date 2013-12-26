@@ -143,6 +143,7 @@ class User_c extends CI_Controller {
 		$this->form_validation->set_rules('city', 'City', 'required|trim|xss_clean|strip_tags|max_length[30]') ;
 		$this->form_validation->set_rules('state', 'State', 'required|trim|xss_clean|alpha|exact_length[2]') ;
 		$this->form_validation->set_rules('website', 'Website', 'trim|xss_clean|prep_url|strip_tags|max_length[50]') ;
+		$this->form_validation->set_rules('company', 'Company', 'trim|xss_clean|prep_url|strip_tags|max_length[30]') ;
 		$this->form_validation->set_rules('bio', 'Bio', 'required|trim|xss_clean|strip_tags|max_length[1000]') ;
 		$this->form_validation->set_message('alpha', 'Please choose a state.' ) ;
 		if ($this->form_validation->run() == TRUE) {
@@ -201,6 +202,7 @@ class User_c extends CI_Controller {
 		$this->form_validation->set_rules('city', 'City', 'required|trim|xss_clean|strip_tags|max_length[30]') ;
 		$this->form_validation->set_rules('state', 'State', 'required|trim|xss_clean|alpha|exact_length[2]') ;
 		$this->form_validation->set_rules('website', 'Website', 'trim|xss_clean|prep_url|strip_tags|max_length[50]') ;
+		$this->form_validation->set_rules('company', 'Company', 'trim|xss_clean|prep_url|strip_tags|max_length[30]') ;
 		$this->form_validation->set_rules('bio', 'Bio', 'required|trim|xss_clean|strip_tags|max_length[1000]') ;
 		$this->form_validation->set_message('alpha', 'Please choose a state.' ) ;
 		//$pic = 'unk-user.png' ;

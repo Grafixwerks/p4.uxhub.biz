@@ -556,3 +556,24 @@ body .wrapper .btn:hover {
 	clear: both;
 	float: left;
 }
+#success {
+	width: 425px;
+}
+#success legend {
+	display:none;
+}
+#success .bio {
+	width: 250px;
+	height:200px;
+	float: right;
+}
+#state {
+	width: 250px;
+	float: right;
+}
+#update {
+	float: right;
+	clear: both;
+	margin-top: 20px;
+}
+
