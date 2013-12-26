@@ -3,7 +3,6 @@
 
 $(document).ready(function(){
 
-
 	// login modal
 	$('.login-link').click(function () {
 		  $('#modal-login').show();
@@ -73,8 +72,6 @@ $(document).ready(function(){
 		}		
 	});
 
-
-
 	$("#login").validate({
 		rules: {	
 			email: {
@@ -133,8 +130,6 @@ $(document).ready(function(){
 		}		
 	});
 
-
-
 	$("#create-ad").validate({
 		rules: {	
 			headline: {
@@ -171,8 +166,6 @@ $(document).ready(function(){
 		}		
 	});
 
-
-
 	// confirm delete 
 	$(".del").click(function () {
 		//alert('delete!');
@@ -183,9 +176,7 @@ $(document).ready(function(){
 		return false;
 	});
 
-
 }); // close document ready
-
 
     jQuery.validator.addMethod('selectcheck', function (value) {
         return (value != '0');
@@ -202,14 +193,3 @@ $(document).ready(function(){
     jQuery.validator.addMethod('typecheck', function (value) {
         return (value != '0');
     }, "Please choose a position type.");
-
-
-
-
-
-
-
-
-
-
-	

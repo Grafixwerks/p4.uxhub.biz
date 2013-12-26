@@ -22,6 +22,4 @@ class Main_c extends CI_Controller {
 		$this->load->view('footer_v') ;
 	}
 
-
-
 } /////////////////////////

@@ -66,17 +66,12 @@ $attributes = array('id' => 'edit-profile');
 ?>
 <div class="main">
 
-
-
 <h1>Edit profile</h1>
 
 <?php echo form_open_multipart('user_c/update_user_validation', $attributes) ; ?>
    
 <?php echo validation_errors('<div class="error">', '</div>') ; ?>   
 
-
-
-    
       <fieldset>
     <legend>Account information</legend>
 
@@ -85,60 +80,45 @@ $attributes = array('id' => 'edit-profile');
       <input type="text" name="f_name" value="<?php echo $f_name ; ?>" id="f_name"  class="txt"title="first name" maxlength="30" />
     </div><!-- .text-group -->
     
-    
     <div class="text-group">
       <label for="l_name" >Last Name:</label>
       <input type="text" name="l_name" value="<?php echo $l_name ; ?>" id="l_name"  class="txt" title="last name" maxlength="30" />
     </div><!-- .text-group -->
-    
 
     <div class="text-group">
       <label for="email" >E-Mail:</label>
       <input type="text" name="email" value="<?php echo $email ; ?>" id="email" maxlength="100" class="txt" title="email" /><!--autocomplete="off"-->
     </div><!-- .text-group -->
-    
-    
 
     <div class="text-group">
       <label for="city" >City:</label>
       <input type="text" name="city" id="city" value="<?php echo $city ; ?>"  class="txt" maxlength="30" />
     </div><!-- .text-group -->
 
-
     <div class="text-group">
       <label for="state" >State:</label>
       <div class="dropdown"><?php echo form_dropdown('state', $options, $state); ?></div><!-- .dropdown -->
     </div><!-- .text-group -->
-    
 
     <div class="text-group">
       <label for="website" >Website:</label>
       <input type="text" name="website" id="website" value="<?php echo $website ; ?>" class="txt" maxlength="50" />
     </div><!-- .text-group -->
 
-
     <div class="text-group">
       <label for="userfile" >Picture:</label>
       <input type="file" name="userfile" id="userfile" size="50" class="txt"  />
     </div><!-- .text-group -->
 
-
-
-
     <div class="text-group">
       <label for="bio" >Bio:</label>
       <textarea name="bio" id="bio" class="bio txt" ><?php echo $bio ; ?></textarea>
     </div><!-- .text-group -->
-    
-   
-    
+
         
   <input type="submit" name="submit" value="Update" id="update" class="btn" />    
   </fieldset>
 
 <?php echo form_close() ; ?>
-
-
-
 
 </div><!-- close .main -->

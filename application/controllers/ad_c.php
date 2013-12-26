@@ -63,9 +63,6 @@ class Ad_c extends CI_Controller {
 			}
 	}
 
-
-
-
 	// create ad validation
 	public function edit_ad_validation()
 	{
@@ -94,16 +91,6 @@ class Ad_c extends CI_Controller {
 			}
 	}
 
-	// ad created
-//	public function created()
-//	{
-//		$data['title'] = 'Ad Created' ;
-//		$this->load->view('header_v', $data) ;
-//		$this->load->view('created_v', $data) ;
-//		$this->load->view('footer_v') ;
-//	}
-
-
 	// Delete an ad
 	public function delete($ad_id)
 	{
@@ -114,7 +101,5 @@ class Ad_c extends CI_Controller {
 		$this->ads_m->delete_ad($ad_id) ;
 		redirect('dashboard') ;
 	}
-
-
 
 } /////////////////////

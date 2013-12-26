@@ -71,9 +71,6 @@ class Ads_m extends CI_Model {
 		}
 	}
 
-
-
-
 	// delete 1 ad
 	public function delete_ad($ad_id) {
 		$data = array (
@@ -88,8 +85,4 @@ class Ads_m extends CI_Model {
 		}
 	}
 
-
 } // close class Ads_m
-
-
-

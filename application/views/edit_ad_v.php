@@ -8,19 +8,11 @@
 ?>
 
 
-
-
-
-
 <div class="main">
-
-
 
 <h1>Edit job ad</h1>
 
 <?php foreach ($results as $ad): ?> 
-
-
 
 <?php 
 //echo $ad->location ; 
@@ -29,7 +21,6 @@
 //echo $ad->on_site ; 
 //echo $ad->level ; 
 ?>
-
 
 <?php endforeach  ?> 
 <?php 
@@ -73,8 +64,6 @@
 
 </div><!-- close .form-select -->
 
-
-
 <div class="form-select">
 <label for="type">Type<span class="star">*</span></label>
 
@@ -88,7 +77,6 @@
 
 </div><!-- close .form-select --> 
 
-
 <div class="form-radio">
 <h3>Hours<span class="star">*</span></h3>
 
@@ -99,7 +87,6 @@
 <input name="hours" type="radio" value="Part time" id="part-time">
 
 </div><!-- close .form-radio -->
-
 
 <div class="form-radio">
 <h3>On site<span class="star">*</span></h3>
@@ -122,8 +109,6 @@
 <input name="create-ad" id="btn-ad" class="btn" type="submit" value="Edit Ad" />
 <p class="notice"><span class="star">*</span>Required.</p>
 <?php echo form_close() ; ?>
-
-
 
 
 </div><!-- close .main -->

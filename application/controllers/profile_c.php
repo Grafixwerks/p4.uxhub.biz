@@ -14,12 +14,6 @@ class Profile_c extends CI_Controller {
 		$this->load->view('header_v', $data) ;
 		$this->load->view('user_v', $data) ;
 		$this->load->view('footer_v') ;
-//		$data['title'] = $this->session->userdata('f_name') ;
-//		$data['title'] .= ' ' ;
-//		$data['title'] .= $this->session->userdata('l_name') ;
-//		$this->load->view('header_v', $data) ;
-//		$this->load->view('profile_v', $data) ;
-//		$this->load->view('footer_v') ;
 	}
 
 	// User profile page
