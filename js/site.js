@@ -94,8 +94,6 @@ $(document).ready(function(){
 		}		
 	});
 
-
-
 	$("#success").validate({
 		rules: {	
 			city: {
@@ -109,6 +107,64 @@ $(document).ready(function(){
 		messages: {
 			city: "Please enter your home city.",
 			state: "Please choose your home state."
+		},
+		errorPlacement: function(error, element) {
+			 error.appendTo(element.parent());
+		}		
+	});
+
+	$("#send-message").validate({
+		rules: {	
+			subject: {
+				required: true,
+				minlength: 5
+			},
+			message: {
+				required: true,
+				minlength: 5
+			}
+		},
+		messages: {
+			subject: "Please enter message subject.",
+			message: "Please enter a message."
+		},
+		errorPlacement: function(error, element) {
+			 error.appendTo(element.parent());
+		}		
+	});
+
+
+
+	$("#create-ad").validate({
+		rules: {	
+			headline: {
+				required: true,
+				minlength: 5
+			},
+			level: {
+				levelcheck: true
+			},
+			location: {
+				locationcheck: true
+			},
+			type: {
+				typecheck: true
+			},		
+			hours: {
+				required: true,
+			},
+			'on_site': {
+				required: true,
+			} ,
+			description: {
+				required: true,
+			}
+		},
+		messages: {
+			headline: "Please enter a headline." ,
+			hours: "Please choose hours." ,
+			'on_site': "Please choose." ,
+			'description': "Please enter job description."
 		},
 		errorPlacement: function(error, element) {
 			 error.appendTo(element.parent());
@@ -133,4 +189,27 @@ $(document).ready(function(){
 
     jQuery.validator.addMethod('selectcheck', function (value) {
         return (value != '0');
-    }, "Please choose your home state");
+    }, "Please choose your home state.");
+
+    jQuery.validator.addMethod('levelcheck', function (value) {
+        return (value != '0');
+    }, "Please choose a position level.");
+
+    jQuery.validator.addMethod('locationcheck', function (value) {
+        return (value != '0');
+    }, "Please choose a location.");
+
+    jQuery.validator.addMethod('typecheck', function (value) {
+        return (value != '0');
+    }, "Please choose a position type.");
+
+
+
+
+
+
+
+
+
+
+	
