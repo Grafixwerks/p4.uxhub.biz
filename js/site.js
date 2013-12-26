@@ -95,6 +95,28 @@ $(document).ready(function(){
 	});
 
 
+
+	$("#success").validate({
+		rules: {	
+			city: {
+				required: true,
+				minlength: 2
+			},
+			state: {
+				selectcheck: true
+			}
+		},
+		messages: {
+			city: "Please enter your home city.",
+			state: "Please choose your home state."
+		},
+		errorPlacement: function(error, element) {
+			 error.appendTo(element.parent());
+		}		
+	});
+
+
+
 	// confirm delete 
 	$(".del").click(function () {
 		//alert('delete!');
@@ -107,3 +129,8 @@ $(document).ready(function(){
 
 
 }); // close document ready
+
+
+    jQuery.validator.addMethod('selectcheck', function (value) {
+        return (value != '0');
+    }, "Please choose your home state");

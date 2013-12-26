@@ -79,13 +79,13 @@ $attributes = array('class' => 'success', 'id' => 'success');
 
 
     <div class="form-field">
-      <label for="city" class="success-label">City:</label>
+      <label for="city" class="success-label">City:<span class="star">*</span></label>
       <input type="text" name="city" id="city" value="<?php echo set_value('city'); ?>"  class="med txt" maxlength="30" />
     </div><!-- .form-field -->
 
 
     <div class="form-field">
-      <label for="state" class="success-label">State:</label>
+      <label for="state" class="success-label">State:<span class="star">*</span></label>
       <div class="dropdown"><?php echo form_dropdown('state', $options, '0', $id) ; ?></div><!-- .dropdown -->
     </div><!-- .form-field -->
     
@@ -118,7 +118,7 @@ $attributes = array('class' => 'success', 'id' => 'success');
         
   <input type="submit" name="submit" value="Submit" id="update" class="btn" />    
   </fieldset>
-
+<p class="notice"><span class="star">*</span>Required information.</p>
 <?php echo form_close() ; ?>
 
 
